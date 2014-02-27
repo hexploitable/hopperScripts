@@ -43,9 +43,7 @@ while i < procCount:
     items = ["[", "]", ":"]
     for item in items:
         name = name.replace(item, "")
-    name = name.replace(" ", "___")
-    name = name.replace("+", "_classMessage_")
-    name = name.replace("-", "_instanceMessage_")
+    name = name.replace(" ", "__")
     
     # grab the decompilation
     output = proc.decompile()
@@ -59,4 +57,3 @@ while i < procCount:
 
 # inform user of successful export
 print "[*] Pseudo code export complete. Export located at: %s" % (path)
-
